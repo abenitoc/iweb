@@ -14,6 +14,7 @@
 		5CF6E4441BC406C80066BD75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6E4421BC406C80066BD75 /* LaunchScreen.storyboard */; };
 		5CF6E44F1BC406C80066BD75 /* MuelleAmortiguadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6E44E1BC406C80066BD75 /* MuelleAmortiguadoTests.swift */; };
 		5CF6E45A1BC406C80066BD75 /* MuelleAmortiguadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6E4591BC406C80066BD75 /* MuelleAmortiguadoUITests.swift */; };
+		5CF6E46A1BC430900066BD75 /* springModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6E4691BC430900066BD75 /* springModel.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5CF6E4551BC406C80066BD75 /* MuelleAmortiguadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuelleAmortiguadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF6E4591BC406C80066BD75 /* MuelleAmortiguadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuelleAmortiguadoUITests.swift; sourceTree = "<group>"; };
 		5CF6E45B1BC406C80066BD75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF6E4691BC430900066BD75 /* springModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = springModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				5CF6E4401BC406C80066BD75 /* Assets.xcassets */,
 				5CF6E4421BC406C80066BD75 /* LaunchScreen.storyboard */,
 				5CF6E4451BC406C80066BD75 /* Info.plist */,
+				5CF6E4691BC430900066BD75 /* springModel.swift */,
 			);
 			path = MuelleAmortiguado;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF6E46A1BC430900066BD75 /* springModel.swift in Sources */,
 				5CF6E43C1BC406C80066BD75 /* ViewController.swift in Sources */,
 				5CF6E43A1BC406C80066BD75 /* AppDelegate.swift in Sources */,
 			);
