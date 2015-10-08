@@ -20,5 +20,5 @@ protocol springViewDataSource : class{
 }
 
 class SpringView : UIView{
-    
+    var dataSource = 1.0
 }
