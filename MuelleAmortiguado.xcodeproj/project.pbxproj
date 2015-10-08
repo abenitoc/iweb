@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CCE70131BC684780049C7C2 /* springVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE70121BC684780049C7C2 /* springVIew.swift */; settings = {ASSET_TAGS = (); }; };
 		5CF6E43A1BC406C80066BD75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6E4391BC406C80066BD75 /* AppDelegate.swift */; };
 		5CF6E43C1BC406C80066BD75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6E43B1BC406C80066BD75 /* ViewController.swift */; };
 		5CF6E43F1BC406C80066BD75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6E43D1BC406C80066BD75 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CCE70121BC684780049C7C2 /* springVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = springVIew.swift; sourceTree = "<group>"; };
 		5CF6E4361BC406C80066BD75 /* MuelleAmortiguado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuelleAmortiguado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF6E4391BC406C80066BD75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CF6E43B1BC406C80066BD75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				5CF6E4421BC406C80066BD75 /* LaunchScreen.storyboard */,
 				5CF6E4451BC406C80066BD75 /* Info.plist */,
 				5CF6E4691BC430900066BD75 /* springModel.swift */,
+				5CCE70121BC684780049C7C2 /* springVIew.swift */,
 			);
 			path = MuelleAmortiguado;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF6E46A1BC430900066BD75 /* springModel.swift in Sources */,
+				5CCE70131BC684780049C7C2 /* springVIew.swift in Sources */,
 				5CF6E43C1BC406C80066BD75 /* ViewController.swift in Sources */,
 				5CF6E43A1BC406C80066BD75 /* AppDelegate.swift in Sources */,
 			);
@@ -487,6 +491,7 @@
 				5CF6E4601BC406C80066BD75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CF6E4611BC406C80066BD75 /* Build configuration list for PBXNativeTarget "MuelleAmortiguadoTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +500,7 @@
 				5CF6E4631BC406C80066BD75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CF6E4641BC406C80066BD75 /* Build configuration list for PBXNativeTarget "MuelleAmortiguadoUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +509,7 @@
 				5CF6E4661BC406C80066BD75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -46,22 +46,22 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="250" height="240"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="center" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cDG-Xy-uc0">
-                                                                <rect key="frame" x="0.0" y="75" width="29" height="90"/>
+                                                                <rect key="frame" x="0.0" y="75" width="33" height="90"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyx-Ld-nvo">
-                                                                        <rect key="frame" x="10" y="0.0" width="9" height="21"/>
+                                                                        <rect key="frame" x="12" y="0.0" width="9" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Masa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfG-DC-XO3">
-                                                                        <rect key="frame" x="0.0" y="35" width="29" height="21"/>
+                                                                        <rect key="frame" x="0.0" y="35" width="33" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1b-Qu-rHg">
-                                                                        <rect key="frame" x="10" y="69" width="10" height="21"/>
+                                                                        <rect key="frame" x="12" y="69" width="10" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -74,16 +74,26 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DkG-Hb-RCQ">
-                                                                <rect key="frame" x="34" y="75" width="216" height="90"/>
+                                                                <rect key="frame" x="38" y="75" width="212" height="90"/>
                                                                 <subviews>
                                                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-gv-eqR">
-                                                                        <rect key="frame" x="-2" y="0.0" width="220" height="31"/>
+                                                                        <rect key="frame" x="-2" y="0.0" width="216" height="31"/>
+                                                                        <connections>
+                                                                            <action selector="ass:" destination="BYZ-38-t0r" eventType="valueChanged" id="PjK-Gd-NRS"/>
+                                                                            <action selector="kChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="vXo-rH-xjp"/>
+                                                                        </connections>
                                                                     </slider>
                                                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-Ib-fDx">
-                                                                        <rect key="frame" x="-2" y="30" width="220" height="31"/>
+                                                                        <rect key="frame" x="-2" y="30" width="216" height="31"/>
+                                                                        <connections>
+                                                                            <action selector="masaChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Scl-v7-z9j"/>
+                                                                        </connections>
                                                                     </slider>
                                                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gdG-jq-pCL">
-                                                                        <rect key="frame" x="-2" y="60" width="220" height="31"/>
+                                                                        <rect key="frame" x="-2" y="60" width="216" height="31"/>
+                                                                        <connections>
+                                                                            <action selector="lambdaChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="tbW-fl-TE0"/>
+                                                                        </connections>
                                                                     </slider>
                                                                 </subviews>
                                                                 <constraints>
@@ -147,6 +157,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="pBv-z9-M0X" secondAttribute="trailing" constant="10" id="kTw-ng-GcN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="kSlider" destination="4qI-gv-eqR" id="LrP-y8-zJW"/>
+                        <outlet property="lambdaSlider" destination="gdG-jq-pCL" id="3rs-32-kqN"/>
+                        <outlet property="masaSlider" destination="ZHk-Ib-fDx" id="nuX-d7-LSi"/>
+                        <outlet property="pos_timOutlet" destination="fWz-Ph-8Fr" id="I5E-1y-HT2"/>
+                        <outlet property="vel_posOutlet" destination="EYw-55-iaL" id="mA5-S5-FLw"/>
+                        <outlet property="vel_timOutlet" destination="Tao-Hx-feQ" id="wjD-DN-Wg9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
