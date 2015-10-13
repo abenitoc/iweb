@@ -101,10 +101,10 @@
 		5CF6E4381BC406C80066BD75 /* MuelleAmortiguado */ = {
 			isa = PBXGroup;
 			children = (
+				5CF6E4401BC406C80066BD75 /* Assets.xcassets */,
 				5CF6E4391BC406C80066BD75 /* AppDelegate.swift */,
 				5CF6E43B1BC406C80066BD75 /* ViewController.swift */,
 				5CF6E43D1BC406C80066BD75 /* Main.storyboard */,
-				5CF6E4401BC406C80066BD75 /* Assets.xcassets */,
 				5CF6E4421BC406C80066BD75 /* LaunchScreen.storyboard */,
 				5CF6E4451BC406C80066BD75 /* Info.plist */,
 				5CF6E4691BC430900066BD75 /* springModel.swift */,

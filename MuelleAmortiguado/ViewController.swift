@@ -8,20 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, springViewDataSource {
 
     @IBOutlet weak var kSlider: UISlider!
     @IBOutlet weak var masaSlider: UISlider!
     @IBOutlet weak var lambdaSlider: UISlider!
     
-    @IBOutlet weak var vel_posOutlet: UIView!
-    @IBOutlet weak var pos_timOutlet: UIView!
-    @IBOutlet weak var vel_timOutlet: UIView!
+    @IBOutlet weak var vel_posOutlet: SpringView!
+    @IBOutlet weak var pos_timOutlet: SpringView!
+    @IBOutlet weak var vel_timOutlet: SpringView!
     
     var spring : springModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        vel_timOutlet.dataSource = self
+        pos_timOutlet.dataSource = self
+        vel_timOutlet.dataSource = self
+        
         kSlider.sendActionsForControlEvents(.ValueChanged)
         masaSlider.sendActionsForControlEvents(.ValueChanged)
         lambdaSlider.sendActionsForControlEvents(.ValueChanged)
@@ -57,5 +62,27 @@ class ViewController: UIViewController {
         pos_timOutlet.setNeedsDisplay()
         vel_timOutlet.setNeedsDisplay()
     }
+    
+    func startTimeOfSpringView( springView: SpringView ) -> Double{
+        return 0
+    }
+    
+    func endTimeOfSpringView(springView: SpringView) -> Double{
+        return 200
+    }
+
+    func pointOfSpringView(springView: SpringView, atTime t: Double) -> Point{
+        switch springView {
+        case pos_timOutlet:
+            return Point(x:t, y: spring.posAtTime(t))
+        case vel_timOutlet:
+            return Point(x:t, y: spring.speedAtTime(t))
+        case vel_posOutlet:
+            return Point(x: spring.posAtTime(t), y:spring.speedAtTime(t))
+        default:
+            return Point(x: 0.0, y: 0.0)
+        }
+    }
 }
+
 
