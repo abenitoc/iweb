@@ -76,20 +76,19 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DkG-Hb-RCQ">
                                                                 <rect key="frame" x="128" y="75" width="122" height="90"/>
                                                                 <subviews>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-gv-eqR">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-5" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-gv-eqR">
                                                                         <rect key="frame" x="-2" y="0.0" width="126" height="31"/>
                                                                         <connections>
-                                                                            <action selector="ass:" destination="BYZ-38-t0r" eventType="valueChanged" id="PjK-Gd-NRS"/>
                                                                             <action selector="kChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="vXo-rH-xjp"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-Ib-fDx">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-5" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-Ib-fDx">
                                                                         <rect key="frame" x="-2" y="30" width="126" height="31"/>
                                                                         <connections>
                                                                             <action selector="masaChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Scl-v7-z9j"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gdG-jq-pCL">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-5" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="gdG-jq-pCL">
                                                                         <rect key="frame" x="-2" y="60" width="126" height="31"/>
                                                                         <connections>
                                                                             <action selector="lambdaChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="tbW-fl-TE0"/>
@@ -107,7 +106,6 @@
                                                             </stackView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="DkG-Hb-RCQ" firstAttribute="leading" secondItem="cDG-Xy-uc0" secondAttribute="trailing" id="bGV-ak-PXq"/>
                                                             <constraint firstItem="cDG-Xy-uc0" firstAttribute="height" secondItem="DkG-Hb-RCQ" secondAttribute="height" id="qtc-2y-QU9"/>
                                                         </constraints>
                                                     </stackView>

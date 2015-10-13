@@ -23,6 +23,8 @@ class ViewController: UIViewController, springViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        spring = springModel()
+        
         vel_timOutlet.dataSource = self
         pos_timOutlet.dataSource = self
         vel_timOutlet.dataSource = self
@@ -31,12 +33,6 @@ class ViewController: UIViewController, springViewDataSource {
         masaSlider.sendActionsForControlEvents(.ValueChanged)
         lambdaSlider.sendActionsForControlEvents(.ValueChanged)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     @IBAction func kChange(sender: UISlider) {
         spring.k = Double(sender.value)
@@ -80,7 +76,7 @@ class ViewController: UIViewController, springViewDataSource {
         case vel_posOutlet:
             return Point(x: spring.posAtTime(t), y:spring.speedAtTime(t))
         default:
-            return Point(x: 0.0, y: 0.0)
+            return Point(x: t, y: t)
         }
     }
 }

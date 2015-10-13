@@ -42,11 +42,11 @@ class SpringView : UIView{
         class FakeDataSource: springViewDataSource{
         
             func startTimeOfSpringView(functionView: SpringView) -> Double{
-                return 0.0
+                return 0
             }
             
             func endTimeOfSpringView(functionView: SpringView)-> Double {
-                return 200.0
+                return 200
             }
             
             func pointOfSpringView(functionView: SpringView, atTime t: Double ) -> Point {
@@ -67,14 +67,14 @@ class SpringView : UIView{
         let width = Double(bounds.size.width)
         
         let startTime = dataSource.startTimeOfSpringView(self)
-        let endTime = dataSource.startTimeOfSpringView(self)
+        let endTime = dataSource.endTimeOfSpringView(self)
         let incrTime = max((endTime - startTime) / width , 0.01)
-        
         let path = UIBezierPath()
         
         var position = dataSource.pointOfSpringView(self, atTime: startTime)
         var x = xPosition(position.x)
         var y = yPosition(position.y)
+        
         path.moveToPoint(CGPointMake(x, y))
         
         for var t = startTime ; t < endTime ; t += incrTime {
@@ -85,7 +85,6 @@ class SpringView : UIView{
         }
         
         path.lineWidth = CGFloat(lineWidth)
-        
         
         path.stroke()
     }
@@ -108,21 +107,17 @@ class SpringView : UIView{
         CGContextMoveToPoint(context, height/2, 0)
         CGContextAddLineToPoint(context, height/2, width)
         CGContextStrokePath(context)
-
-    
     }
     
-    
-    
-    private func xPosition(meters: Double) -> CGFloat {
+    private func xPosition(x: Double) -> CGFloat {
         let width = bounds.size.width
-        return width/2 + CGFloat(meters/scale)
+        return width/2 + CGFloat(x*50)
         
     }
     
-    private func yPosition(meters: Double) -> CGFloat {
+    private func yPosition(y: Double) -> CGFloat {
         let height = bounds.size.height
-        return height/2 - CGFloat(meters/scale)
+        return height/2 + CGFloat(y*50)
     }
     
 }
