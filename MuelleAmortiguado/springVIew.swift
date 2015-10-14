@@ -29,6 +29,12 @@ class SpringView : UIView{
         }
     }
     
+    var resolution: Double = 500.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
     @IBInspectable
     var lineWidth : Double = 3.0
     
@@ -64,11 +70,9 @@ class SpringView : UIView{
     
     private func drawFunction() {
         
-        let width = Double(bounds.size.width)
-        
         let startTime = dataSource.startTimeOfSpringView(self)
         let endTime = dataSource.endTimeOfSpringView(self)
-        let incrTime = max((endTime - startTime) / width , 0.01)
+        let incrTime = max((endTime - startTime) / resolution , 0.01)
         let path = UIBezierPath()
         let color = UIColor.redColor()
         color.setStroke()
@@ -93,33 +97,34 @@ class SpringView : UIView{
     
     
     private func drawAxis() {
-        let context = UIGraphicsGetCurrentContext()
-        
+    
         let width = bounds.size.width
         let height = bounds.size.height
         
-        CGContextSetLineWidth(context, 2.0)
+        let yaxis = UIBezierPath()
+        yaxis.moveToPoint(CGPointMake(width/2, 0))
+        yaxis.addLineToPoint(CGPointMake(width/2, height))
        
-        CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
+        let xaxis = UIBezierPath()
+        xaxis.moveToPoint(CGPointMake(0, height/2))
+        xaxis.addLineToPoint(CGPointMake(width, height/2))
         
-        CGContextMoveToPoint(context, 0, width/2)
-        CGContextAddLineToPoint(context, height, width/2)
-        CGContextStrokePath(context)
+        UIColor.blackColor().setStroke()
         
-        CGContextMoveToPoint(context, height/2, 0)
-        CGContextAddLineToPoint(context, height/2, width)
-        CGContextStrokePath(context)
+        yaxis.stroke()
+        xaxis.stroke()
+    
     }
     
     private func xPosition(x: Double) -> CGFloat {
         let width = bounds.size.width
-        return width/2 + CGFloat(x*50)
+        return width/2 + CGFloat(x*30)
         
     }
     
     private func yPosition(y: Double) -> CGFloat {
         let height = bounds.size.height
-        return height/2 + CGFloat(y*50)
+        return height/2 - CGFloat(y*3.5)
     }
     
 	}

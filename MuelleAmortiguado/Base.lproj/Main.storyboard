@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -25,12 +25,14 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="241" verticalHuggingPriority="241" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" text="Muelle amortiguado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVj-oQ-Ama">
                                                 <rect key="frame" x="0.0" y="0.0" width="530" height="50"/>
+                                                <animations/>
                                                 <rect key="contentStretch" x="0.0" y="0.45000000000000001" width="1" height="1"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" red="1" green="0.97864438689570987" blue="0.050721090945156089" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Y4u-5v-eUW"/>
                                         </constraints>
@@ -50,23 +52,27 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyx-Ld-nvo">
                                                                         <rect key="frame" x="57" y="0.0" width="9" height="21"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfG-DC-XO3">
                                                                         <rect key="frame" x="41" y="35" width="41" height="21"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1b-Qu-rHg">
                                                                         <rect key="frame" x="56" y="69" width="10" height="21"/>
+                                                                        <animations/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <animations/>
                                                                 <rect key="contentStretch" x="0.5" y="0.0" width="1" height="1"/>
                                                                 <constraints>
                                                                     <constraint firstItem="u1b-Qu-rHg" firstAttribute="height" secondItem="cyx-Ld-nvo" secondAttribute="height" id="DqR-fd-dcW"/>
@@ -76,25 +82,29 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DkG-Hb-RCQ">
                                                                 <rect key="frame" x="128" y="75" width="122" height="90"/>
                                                                 <subviews>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3000" minValue="1000" maxValue="5000" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-gv-eqR">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3000" minValue="100" maxValue="5000" translatesAutoresizingMaskIntoConstraints="NO" id="4qI-gv-eqR">
                                                                         <rect key="frame" x="-2" y="0.0" width="126" height="31"/>
+                                                                        <animations/>
                                                                         <connections>
                                                                             <action selector="kChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="vXo-rH-xjp"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.5" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-Ib-fDx">
+                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="5" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-Ib-fDx">
                                                                         <rect key="frame" x="-2" y="30" width="126" height="31"/>
+                                                                        <animations/>
                                                                         <connections>
                                                                             <action selector="masaChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Scl-v7-z9j"/>
                                                                         </connections>
                                                                     </slider>
                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="gdG-jq-pCL">
                                                                         <rect key="frame" x="-2" y="60" width="126" height="31"/>
+                                                                        <animations/>
                                                                         <connections>
                                                                             <action selector="lambdaChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="tbW-fl-TE0"/>
                                                                         </connections>
                                                                     </slider>
                                                                 </subviews>
+                                                                <animations/>
                                                                 <constraints>
                                                                     <constraint firstItem="gdG-jq-pCL" firstAttribute="height" secondItem="4qI-gv-eqR" secondAttribute="height" id="2XD-8w-wJz"/>
                                                                     <constraint firstItem="ZHk-Ib-fDx" firstAttribute="top" secondItem="4qI-gv-eqR" secondAttribute="bottom" id="5sw-e4-6jk"/>
@@ -105,6 +115,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                         </subviews>
+                                                        <animations/>
                                                         <constraints>
                                                             <constraint firstItem="cDG-Xy-uc0" firstAttribute="height" secondItem="DkG-Hb-RCQ" secondAttribute="height" id="qtc-2y-QU9"/>
                                                         </constraints>
@@ -114,11 +125,14 @@
                                                         <subviews>
                                                             <view contentMode="redraw" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="EYw-55-iaL" customClass="SpringView" customModule="MuelleAmortiguado" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="240"/>
+                                                                <animations/>
                                                                 <color key="backgroundColor" red="1" green="0.9517163270568102" blue="0.19702958473115162" alpha="1" colorSpace="calibratedRGB"/>
                                                             </view>
                                                         </subviews>
+                                                        <animations/>
                                                     </stackView>
                                                 </subviews>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstItem="qgv-mg-CHf" firstAttribute="width" relation="greaterThanOrEqual" secondItem="VsL-0o-cdp" secondAttribute="width" id="XS7-oU-DMT"/>
                                                 </constraints>
@@ -128,17 +142,22 @@
                                                 <subviews>
                                                     <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fWz-Ph-8Fr" customClass="SpringView" customModule="MuelleAmortiguado" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="250" height="240"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.46643564238490076" green="0.86211206994459122" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Tao-Hx-feQ" customClass="SpringView" customModule="MuelleAmortiguado" customModuleProvider="target">
                                                         <rect key="frame" x="280" y="0.0" width="250" height="240"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.5771532588384457" green="1" blue="0.42245104724058935" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                 </subviews>
+                                                <animations/>
                                             </stackView>
                                         </subviews>
+                                        <animations/>
                                     </stackView>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="EBa-FW-j9S" secondAttribute="trailing" constant="5" id="HAk-wC-iQ6"/>
                                     <constraint firstAttribute="bottom" secondItem="EBa-FW-j9S" secondAttribute="bottom" id="dZh-8y-gN5"/>
@@ -147,6 +166,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="1" green="0.39694272711123357" blue="0.10592117176608495" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pBv-z9-M0X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="AOS-WG-als"/>

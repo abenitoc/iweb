@@ -30,20 +30,24 @@ class springModel{
     
     func updatectes(){
             wo = sqrt(k/masa)
-            gamma = lambda/(masa/2)
+            gamma = lambda/(masa*2)
             omega = sqrt((wo*wo)-(gamma*gamma))
             A = sqrt((xo*xo)+pow((vo+gamma*xo)/omega,2))
-            fi = atan(xo*omega/(wo+omega*xo))
+            fi = atan2(xo*omega,(wo*omega*xo))
     }
     
     func posAtTime(t:Double)->Double{
-        return A*exp(-gamma*t*sin(omega*t+fi))
+        let wtf = omega * t + fi
+        let e = gamma * t
+        
+        return A*exp(-e)*sin(wtf)
     }
     
     func speedAtTime(t:Double)->Double{
-        let ae = A*exp(-gamma*t)
+        let ini = gamma * A
         let wtf = omega * t + fi
-        return -omega * ae*sin(wtf)+ae*omega*cos(omega+fi)
+        let e = gamma * t
+        return -ini * exp(-e) * sin(wtf) + A * exp(-e) * omega * cos(wtf)
     }
     
     
