@@ -28,12 +28,16 @@ class springModel{
     
     private var wo = 1.0, gamma = 1.0, omega = 1.0, A = 1.0, fi = 1.0, xo = 2.0, vo = 0.0
     
-    func updatectes(){
+    private func updatectes(){
             wo = sqrt(k/masa)
             gamma = lambda/(masa*2)
             omega = sqrt((wo*wo)-(gamma*gamma))
             A = sqrt((xo*xo)+pow((vo+gamma*xo)/omega,2))
-            fi = atan2(xo*omega,(wo*omega*xo))
+            fi = atan2(xo*omega,(vo*omega*xo))
+    }
+    
+    init () {
+        updatectes()
     }
     
     func posAtTime(t:Double)->Double{

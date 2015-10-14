@@ -19,6 +19,9 @@ protocol springViewDataSource : class{
     func pointOfSpringView(springView: SpringView, atTime t: Double)-> Point
 }
 
+enum SpecificView{
+    case PosVel,VelTime,PosTime
+}
 
 @IBDesignable
 class SpringView : UIView{
@@ -35,14 +38,20 @@ class SpringView : UIView{
         }
     }
     
-    var resolution: Double = 10000.0 {
+    var resolution: Double = 500.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    var type =  SpecificView.PosVel {
         didSet{
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var lineWidth : Double = 3.0
+    var lineWidth : Double = 1.5
     
     #if TARGET_INTERFACE_BUILDER
         var dataSource: springViewDataSource!
@@ -127,7 +136,7 @@ class SpringView : UIView{
     private func drawLabels(){
         let theSubviews = self.subviews
         
-        for (var view ) in theSubviews
+        for ( view ) in theSubviews
         {
             view.removeFromSuperview()
         }
@@ -137,12 +146,23 @@ class SpringView : UIView{
         
         let yLabel =  UILabel(frame: CGRectMake((width-10), (height/2+10), 10, 10))
         yLabel.font = UIFont.systemFontOfSize(10)
-        yLabel.text = "y"
         yLabel.setNeedsDisplay()
         
-        let xLabel = UILabel(frame: CGRectMake(width/2, 0, 10, 10))
+        let xLabel = UILabel(frame: CGRectMake((width/2) + 5, 0, 10, 10))
         xLabel.font = UIFont.systemFontOfSize(10)
-        xLabel.text = "x"
+        
+        switch type{
+        case .VelTime:
+            xLabel.text = "t"
+            yLabel.text = "v"
+        case .PosTime:
+            xLabel.text = "t"
+            yLabel.text = "p"
+        case .PosVel:
+            xLabel.text = "v"
+            yLabel.text = "p"
+        }
+        
         xLabel.setNeedsDisplay()
         
         self.sendSubviewToBack(xLabel)

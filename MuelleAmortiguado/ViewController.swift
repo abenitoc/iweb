@@ -29,6 +29,20 @@ class ViewController: UIViewController, springViewDataSource {
         pos_timOutlet.dataSource = self
         vel_posOutlet.dataSource = self
         
+        vel_timOutlet.type = SpecificView.VelTime
+        pos_timOutlet.type = SpecificView.PosTime
+        vel_posOutlet.type = SpecificView.PosVel
+        
+        
+        vel_posOutlet.scaleX = 30.0
+        vel_posOutlet.scaleY = 2.5
+        
+        pos_timOutlet.scaleX = 30.0
+        pos_timOutlet.scaleY = 25.0
+        
+        vel_posOutlet.scaleX = 30.0
+        vel_posOutlet.scaleY = 3.5
+        
         kSlider.sendActionsForControlEvents(.ValueChanged)
         masaSlider.sendActionsForControlEvents(.ValueChanged)
         lambdaSlider.sendActionsForControlEvents(.ValueChanged)
@@ -64,7 +78,7 @@ class ViewController: UIViewController, springViewDataSource {
     }
     
     func endTimeOfSpringView(springView: SpringView) -> Double{
-        return 200
+        return 10
     }
 
     func pointOfSpringView(springView: SpringView, atTime t: Double) -> Point{
