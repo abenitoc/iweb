@@ -29,7 +29,7 @@ class SpringView : UIView{
         }
     }
     
-    var resolution: Double = 500.0 {
+    var resolution: Double = 3000.0 {
         didSet{
             setNeedsDisplay()
         }
@@ -113,6 +113,8 @@ class SpringView : UIView{
         
         yaxis.stroke()
         xaxis.stroke()
+        
+        
     
     }
     
