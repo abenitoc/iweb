@@ -118,54 +118,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MuelleAmortiguado/springVIew.swift"
-            timestampString = "466446361.1148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "drawFunction()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MuelleAmortiguado/springVIew.swift"
-            timestampString = "466448107.123133"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "drawRect(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MuelleAmortiguado/springVIew.swift"
-            timestampString = "466448107.844069"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "drawRect(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MuelleAmortiguado/ViewController.swift"
             timestampString = "466448190.672131"
             startingColumnNumber = "9223372036854775807"
@@ -176,66 +128,82 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MuelleAmortiguado.ViewController.vel_timOutlet.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;MuelleAmortiguado.SpringView&gt;"
                   moduleName = "MuelleAmortiguado"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/g336/Downloads/iweb/MuelleAmortiguado/ViewController.swift"
-                  timestampString = "466512375.438183"
+                  timestampString = "466526714.4134"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "18">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MuelleAmortiguado.ViewController.vel_timOutlet.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;MuelleAmortiguado.SpringView&gt;"
                   moduleName = "MuelleAmortiguado"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/g336/Downloads/iweb/MuelleAmortiguado/ViewController.swift"
-                  timestampString = "466512375.438466"
+                  timestampString = "466526714.413655"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MuelleAmortiguado.ViewController.init (MuelleAmortiguado.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; MuelleAmortiguado.ViewController"
                   moduleName = "MuelleAmortiguado"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/g336/Downloads/iweb/MuelleAmortiguado/ViewController.swift"
-                  timestampString = "466512375.438984"
+                  timestampString = "466526714.414144"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "410">
+                  offsetFromSymbolStart = "378">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MuelleAmortiguado.ViewController.init (MuelleAmortiguado.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;MuelleAmortiguado.ViewController&gt;"
                   moduleName = "MuelleAmortiguado"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/g336/Downloads/iweb/MuelleAmortiguado/ViewController.swift"
-                  timestampString = "466512375.439252"
+                  timestampString = "466526714.414355"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "300">
+                  offsetFromSymbolStart = "295">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MuelleAmortiguado/springVIew.swift"
+            timestampString = "466529375.865629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "drawLabels()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

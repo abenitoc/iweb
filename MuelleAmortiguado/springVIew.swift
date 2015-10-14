@@ -23,13 +23,19 @@ protocol springViewDataSource : class{
 @IBDesignable
 class SpringView : UIView{
     
-    var scale: Double = 1.0{
+    var scaleX: Double = 30.0{
         didSet{
             setNeedsDisplay()
         }
     }
     
-    var resolution: Double = 3000.0 {
+    var scaleY: Double = 3.5{
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    var resolution: Double = 10000.0 {
         didSet{
             setNeedsDisplay()
         }
@@ -66,6 +72,7 @@ class SpringView : UIView{
     override func drawRect(rect: CGRect) {
         drawAxis()
         drawFunction()
+        drawLabels()
     }
     
     private func drawFunction() {
@@ -115,18 +122,44 @@ class SpringView : UIView{
         xaxis.stroke()
         
         
+    }
     
+    private func drawLabels(){
+        let theSubviews = self.subviews
+        
+        for (var view ) in theSubviews
+        {
+            view.removeFromSuperview()
+        }
+        
+        let width = bounds.size.width
+        let height = bounds.size.height
+        
+        let yLabel =  UILabel(frame: CGRectMake((width-10), (height/2+10), 10, 10))
+        yLabel.font = UIFont.systemFontOfSize(10)
+        yLabel.text = "y"
+        yLabel.setNeedsDisplay()
+        
+        let xLabel = UILabel(frame: CGRectMake(width/2, 0, 10, 10))
+        xLabel.font = UIFont.systemFontOfSize(10)
+        xLabel.text = "x"
+        xLabel.setNeedsDisplay()
+        
+        self.sendSubviewToBack(xLabel)
+        self.sendSubviewToBack(yLabel)
+        self.addSubview(yLabel)
+        self.addSubview(xLabel)
     }
     
     private func xPosition(x: Double) -> CGFloat {
         let width = bounds.size.width
-        return width/2 + CGFloat(x*30)
+        return width/2 + CGFloat(x*scaleX)
         
     }
     
     private func yPosition(y: Double) -> CGFloat {
         let height = bounds.size.height
-        return height/2 - CGFloat(y*3.5)
+        return height/2 - CGFloat(y*scaleY)
     }
     
 	}
