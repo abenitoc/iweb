@@ -27,7 +27,7 @@ class ViewController: UIViewController, springViewDataSource {
         
         vel_timOutlet.dataSource = self
         pos_timOutlet.dataSource = self
-        vel_timOutlet.dataSource = self
+        vel_posOutlet.dataSource = self
         
         kSlider.sendActionsForControlEvents(.ValueChanged)
         masaSlider.sendActionsForControlEvents(.ValueChanged)

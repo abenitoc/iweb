@@ -70,6 +70,8 @@ class SpringView : UIView{
         let endTime = dataSource.endTimeOfSpringView(self)
         let incrTime = max((endTime - startTime) / width , 0.01)
         let path = UIBezierPath()
+        let color = UIColor.redColor()
+        color.setStroke()
         
         var position = dataSource.pointOfSpringView(self, atTime: startTime)
         var x = xPosition(position.x)
@@ -120,4 +122,4 @@ class SpringView : UIView{
         return height/2 + CGFloat(y*50)
     }
     
-}
+	}
