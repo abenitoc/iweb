@@ -81,6 +81,22 @@ class ViewController: UIViewController, springViewDataSource {
         return 10
     }
 
+    @IBAction func zoom(sender: UIPinchGestureRecognizer) {
+            vel_posOutlet.scaleX *= Double(sender.scale)
+            vel_posOutlet.scaleY *= Double(sender.scale)
+
+            sender.scale = 1
+    }
+    
+    @IBAction func translate(sender: UIPanGestureRecognizer) {
+        let translation = sender.translationInView(self.view)
+        
+        vel_posOutlet.originX = translation.x
+        vel_posOutlet.originY = translation.y
+        
+    }
+
+    
     func pointOfSpringView(springView: SpringView, atTime t: Double) -> Point{
         switch springView {
         case pos_timOutlet:

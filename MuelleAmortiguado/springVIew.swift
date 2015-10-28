@@ -38,6 +38,20 @@ class SpringView : UIView{
         }
     }
     
+    
+    var originX: CGFloat = 0.0{
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    
+    var originY: CGFloat = 0.0{
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
     var resolution: Double = 500.0 {
         didSet{
             setNeedsDisplay()
@@ -118,12 +132,12 @@ class SpringView : UIView{
         let height = bounds.size.height
         
         let yaxis = UIBezierPath()
-        yaxis.moveToPoint(CGPointMake(width/2, 0))
-        yaxis.addLineToPoint(CGPointMake(width/2, height))
+        yaxis.moveToPoint(CGPointMake(width/2 + originX , 0 - abs(originY)))
+        yaxis.addLineToPoint(CGPointMake(width/2 + originX , height + abs(originY)))
        
         let xaxis = UIBezierPath()
-        xaxis.moveToPoint(CGPointMake(0, height/2))
-        xaxis.addLineToPoint(CGPointMake(width, height/2))
+        xaxis.moveToPoint(CGPointMake(0 - abs(originX), height/2 + originY))
+        xaxis.addLineToPoint(CGPointMake(width + abs(originX), height/2 + originY))
         
         UIColor.blackColor().setStroke()
         
@@ -173,13 +187,13 @@ class SpringView : UIView{
     
     private func xPosition(x: Double) -> CGFloat {
         let width = bounds.size.width
-        return width/2 + CGFloat(x*scaleX)
+        return width/2 + originX + CGFloat(x*scaleX)
         
     }
     
     private func yPosition(y: Double) -> CGFloat {
         let height = bounds.size.height
-        return height/2 - CGFloat(y*scaleY)
+        return height/2 - CGFloat(y*scaleY) + originY
     }
     
 	}
